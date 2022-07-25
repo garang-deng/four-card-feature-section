@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  /* bdr is border */
+  /* clr is color */
+  --supervisor-bdr-clr: hsl(180, 62%, 55%);
+  --team-bdr-clr: hsl(0, 78%, 62%);
+  --karma-bdr-clr: hsl(34, 97%, 64%);
+  --calculator-bdr-clr: hsl(212, 86%, 64%);
+
+  /* bg is background */
+  --headings-clr: hsl(234, 12%, 34%);
+  --paragraphs-clr: hsl(229, 6%, 66%);
+  --main-bg: hsl(0, 0%, 98%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+p:first-child {
+  font-size: 1.75rem;
+  margin-bottom: 0;
+  color: var(--paragraphs-clr);
+}
+
+h1 {
+  font-family: 600;
+  font-size: 1.75rem;
+  color: var(--headings-clr);
+  margin-top: 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.35rem;
+  color: var(--headings-clr);
+  margin: 0;
+}
+
+p {
+  color: var(--paragraphs-clr);
+  margin-top: 0;
+}
+
+#main {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 10%;
+  background-color: var(--main-bg);
+  display: grid;
+  place-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.applied {
+  position: relative;
+  padding: 20px;
+  background-color: white;
+  height: 40vh;
+  border-radius: 6px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.105);
+}
+
+img {
+  width: 40px;
+  position: absolute;
+  top: 75%;
+  left: 82%;
+}
+
+.supervisor {
+  margin-top: 10%;
+  border-top: 3px solid var(--supervisor-bdr-clr);
+}
+
+.team {
+  margin: 30px 0;
+  border-top: 3px solid var(--team-bdr-clr);
+}
+
+.karma {
+  border-top: 3px solid var(--karma-bdr-clr);
+  margin-bottom: 30px;
+}
+
+.calculator {
+  border-top: 3px solid var(--calculator-bdr-clr);
+  margin-bottom: 10%;
+}
+
+@media (min-width: 768px) {
+  #main {
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+    background-color: white;
+    box-shadow: 0 10px 14px 10px rgba(0, 0, 0, 0.065);
+  }
+
+  .header-info {
+    text-align: center;
+    width: 40vw;
+    margin-top: -8%;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+  }
+  .applied {
+    width: 100%;
+    height: 30vh;
+  }
+  .supervisor {
+    grid-column: 1/4;
+    grid-row: 1/5;
+    margin-bottom: 20px;
+  }
+  .team {
+    grid-column: 4/7;
+  }
+  .karma {
+    grid-column: 4/7;
+    grid-row: 2;
+    margin-bottom: -8%;
+  }
+  .calculator {
+    grid-column: 7/10;
+    grid-row: 1/5;
+    margin-top: 20px;
+  }
+  img {
+    width: 30px;
+    top: 75%;
+    left: 82%;
+  }
+}
